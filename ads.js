@@ -42,8 +42,8 @@
     }
   `;
   document.head.appendChild(style);
-
-  function showLoader() {
+  
+function showLoader() {
     const overlay = document.createElement("div");
     overlay.id = "ad-loader-overlay";
     overlay.innerHTML = `
@@ -52,7 +52,7 @@
     `;
     document.body.appendChild(overlay);
   }
-
+  
   function hideLoader() {
     const overlay = document.getElementById("ad-loader-overlay");
     if (overlay) overlay.remove();
@@ -68,12 +68,12 @@
 
     // Rewarded ad slot â€” no .then(), just store the slot directly
     rewardedSlot = googletag.defineOutOfPageSlot(
-       window.AD_CONFIG.reward,
+      "/23330730517/playfusionx.in_reward",
       googletag.enums.OutOfPageFormat.REWARDED
     );
 
     if (rewardedSlot) {
-    //   rewardedSlot.addService(googletag.pubads());
+      rewardedSlot.addService(googletag.pubads());
     }
 
     // Reward events
